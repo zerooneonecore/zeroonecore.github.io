@@ -33,17 +33,18 @@
       The M flag says which syntax to use, and the d flag tells objdump to print the
       assembly language associated with this executable file. 
       Without further ado, the output,
-  <p id="code_2"><span>0000000000001149 <main>:</span><br>
+  <p id="code_2"><span>0000000000001149 \<main\>:</span><br>
     <span>1149:	f3 0f 1e fa          	endbr64</span><br>
     <span>114d:	55                   	push   rbp</span><br>
     <span>114e:	48 89 e5             	mov    rbp,rsp</span><br>
     <span>1151:	48 8d 3d ac 0e 00 00 	lea    rdi,[rip+0xeac]        # 2004 <_IO_stdin_used+0x4></span><br>
-      <span>1158:	e8 f3 fe ff ff       	call   1050 <puts@plt></span><br>
+      <span>1158:	e8 f3 fe ff ff       	call   1050 \<puts@plt\></span><br>
   </p>
   <p>What we notice is that 'puts' is similar to 'printf', but how do we know that they have a relationship?
      It is because an optimization of gcc is to replace a call to printf, with a call to puts, it is rather
     fortunate that they are rather similar words, then what of the argument to printf?</p>
-      
+    Answering this question would be dependent on understanding how address space is allocated,
+    and memory divided up, this would be outside the scope of a first post.
   
 </body>
 </html>
