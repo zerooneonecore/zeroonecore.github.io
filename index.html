@@ -6,6 +6,7 @@
         color: white;}
   h1 { text-align: center; }
   #code_1 { border: 2px solid red; }
+  #code_2 { border: 2px solid red; }
 
 </style>
 <body>
@@ -17,5 +18,32 @@
     <span>}</span>
     </span>
   </p>
+  <span>What does it mean to 'reverse engineer' this?</span>
+  <span>We will be using the c compiler gcc</span>
+  <p>First, we compile with flags -Og, flags are options given
+    to programs on the commandline or terminal before execution
+    The flag -O*, is a flag controlling optimization, the possible values
+    for *, with respect to optimization levels are 0, 1, 2, 3 and g, we will
+    be using g for the debugging level of optimization, as it is what gcc recommends.</p>
+    <p>Our 'reverse engineering' will consist of starting with prior knowledge 
+      of the printf function, and finding it within the assembly language.
+      <span>Essentially we will wish to know, what function is called, and with what
+        argument?</span>The first question can be answered at once by showing the assembly code,
+      which we can do with the following command, <i>objdump -M intel -d filename</i>
+      The M flag says which syntax to use, and the d flag tells objdump to print the
+      assembly language associated with this executable file. 
+      Without further ado, the output,
+  <p id="code_2"><span>0000000000001149 <main>:</span><br>
+    <span>1149:	f3 0f 1e fa          	endbr64</span><br>
+    <span>114d:	55                   	push   rbp</span><br>
+    <span>114e:	48 89 e5             	mov    rbp,rsp</span><br>
+    <span>1151:	48 8d 3d ac 0e 00 00 	lea    rdi,[rip+0xeac]        # 2004 <_IO_stdin_used+0x4></span><br>
+      <span>1158:	e8 f3 fe ff ff       	call   1050 <puts@plt></span><br>
+  </p>
+  <p>What we notice is that 'puts' is similar to 'printf', but how do we know that they have a relationship?
+     It is because an optimization of gcc is to replace a call to printf, with a call to puts, it is rather
+    fortunate that they are rather similar words, then what of the argument to printf?</p>
+      
+  
 </body>
 </html>
