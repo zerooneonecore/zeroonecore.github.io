@@ -20,6 +20,9 @@
   However how do we know how to interpret the addresses? one tempting avenue is to
   assume that the address has preserved the endianness, which is a dangerous assumption, as this
   is rendered output and not read directly from a register or memory for example.
+  In this case a good guess is that the address is rendered in a big endian byte order,
+  as the byte '0x55' is kept constant, which means it is the placeholder for a positional
+  number system. 
   </p>
   
   
