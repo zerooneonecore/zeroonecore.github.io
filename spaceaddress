@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {background-color: #121212;
+        color: white;}
+  h1 { text-align: center; }
+  #code_1 { border: 2px solid red; }
+  #code_2 { border: 2px solid red; }
+
+</style>
+<body>
+<p>First line of text.</p>
+</body>
+</html>
