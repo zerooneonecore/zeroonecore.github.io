@@ -16,6 +16,10 @@
    The easiest way to see memory protections is via the /proc file system, and the
    /proc/<pid>/maps file, which will display the memory map for the process referred to
    by the <pid> argument.
+  <span>We have sample output here: <i>55aa0fee0000-55aa0ff01000 rw-p 00000000 00:00 0 [heap]</i></span>
+  However how do we know how to interpret the addresses? one tempting avenue is to
+  assume that the address has preserved the endianness, which is a dangerous assumption, as this
+  is rendered output and not read directly from a register or memory for example.
   </p>
   
   
