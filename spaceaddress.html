@@ -5,7 +5,7 @@
   body {background-color: #121212;
         color: white;}
   h1 { text-align: center; }
-  #code_1 { margin: auto; font-weight: bold; } 
+  #code_1 { margin: auto; font-weight: bold; display: inline-block; } 
 
 </style>
 <body>
@@ -13,16 +13,16 @@
    We could refer to the metadata the program assigns to divisions of memory or
    Whether that memory is protected in some fashion or not, we will start with the latter<br>
    The easiest way to see memory protections is via the /proc file system, and the
-   /proc/<pid>/maps file, which will display the memory map for the process referred to
-   by the <pid> argument.
+   /proc/\<pid>/maps file, which will display the memory map for the process referred to
+   by the \<pid> argument.
   <br><span>We have sample output here: <i>55aa0fee0000-55aa0ff01000 rw-p 00000000 00:00 0 [heap]</i></span>
-  However how do we know how to interpret the addresses? one tempting avenue is to
+  <br>However how do we know how to interpret the addresses? one tempting avenue is to
   assume that the address has preserved the endianness, which is a dangerous assumption, as this
   is rendered output and not read directly from a register or memory for example.
   In this case a good guess is that the address is rendered in a big endian byte order,
   as the byte '0x55' is kept constant, which means it is likely the placeholder for a positional
   number system. <br>
-  Storing "elppa" as a string, the byte storage is <i>0x00000a6170706c65</i>
+  Storing "elppa" as a string, the byte storage is <i>0x00000a6170706c65</i><br>
   In this case the most significant byte is 0x65 or 'e', we can see it is stored last, and this is
   under the assumption that we are reading from left to right, so before endianness can be interpreted,
   we need to assume that we are reading from left to right, and that the address is a kind of stack,
