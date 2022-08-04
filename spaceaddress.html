@@ -28,7 +28,18 @@
   under the assumption that we are reading from left to right, so before endianness can be interpreted,
   we need to assume that we are reading from left to right, and that the address is a kind of stack,
   with the top of the stack being the rightmost byte. Now since it is stored last, we know that this 
-  is a little endian byte order.
+  is a little endian byte order.<br>
+  From here we can write a kind of pseudo code for determining whether a sequence of bytes is little endian or 
+  big endian.
+  <bold>If (readorder == "left to right") {<br>
+            If (MSBy == "rightmost") {<br>
+                "little endian"<br>
+              }<br>
+            else if (MSBy == "leftmost") {<br>
+                "big endian"<br>
+            }
+  </bold>
+  
   </p>
   
   
