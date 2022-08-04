@@ -5,7 +5,7 @@
   body {background-color: #121212;
         color: white;}
   h1 { text-align: center; }
-  #code_1 { margin: auto } 
+  #code_1 { margin: auto; font-weight: bold; } 
 
 </style>
 <body>
@@ -30,14 +30,14 @@
   is a little endian byte order.<br>
   From here we can write a kind of pseudo code for determining whether a sequence of bytes is little endian or 
   big endian.
-  <bold id="code_1"><br>If (readorder == "left to right") {<br>
+  <p id="code_1"><br>If (readorder == "left to right") {<br>
             If (MSBy == "rightmost") {<br>
                 "little endian"<br>
               }<br>
             else if (MSBy == "leftmost") {<br>
                 "big endian"<br>
             }
-  </bold>
+  </p>
   
   </p>
   
