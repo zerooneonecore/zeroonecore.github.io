@@ -5,7 +5,7 @@
   body {background-color: #121212;
         color: white;}
   h1 { text-align: center; }
-  #code_1 { margin: auto; font-weight: bold;} 
+  #code_1 { margin: auto; font-weight: bold; width: 50%;} 
 
 </style>
 <body>
@@ -13,8 +13,8 @@
    We could refer to the metadata the program assigns to divisions of memory or
    Whether that memory is protected in some fashion or not, we will start with the latter<br>
    The easiest way to see memory protections is via the /proc file system, and the
-   /proc/\<pid>/maps file, which will display the memory map for the process referred to
-   by the \<pid> argument.
+   /proc/&lt;pid&rt;/maps file, which will display the memory map for the process referred to
+   by the &lt;pid&rt; argument.
   <br><span>We have sample output here: <i>55aa0fee0000-55aa0ff01000 rw-p 00000000 00:00 0 [heap]</i></span>
   <br>However how do we know how to interpret the addresses? one tempting avenue is to
   assume that the address has preserved the endianness, which is a dangerous assumption, as this
