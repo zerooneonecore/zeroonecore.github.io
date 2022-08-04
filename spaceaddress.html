@@ -38,7 +38,16 @@
                 "big endian"<br>
             }
   </p><br>
-  Continued
+  <p>
+  Now then, the string which we will print is indicated within the c source <i>char * A = "elppa\n";</i><br>
+  this string is 'hardcoded' into the executable file, and can be seen in this case via the command
+  <i>objdump -s -j .rodata &lt;executablefilename&gt;</i><br>
+  The output is <i>Contents of section .rodata:<br>
+    2000 01000200 656c7070 610a00             ....elppa..</i><br>
+  We can see clearly the byte sequence for elppa, 65:e, 6c:l, 70:p, 70:p, 61: a
+
+  </p>
+  
   
   </p>
   
