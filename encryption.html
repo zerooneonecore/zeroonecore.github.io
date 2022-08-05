@@ -19,7 +19,14 @@
    Hence, an encryption scheme can use the bitwise negation, to actually encrypt the data,
   and there exists a way to recover the data, since<br> <i>((A xor !A) xor !A) == A</i>,
    If this were implemented as a runtime decryption routine, "reverse engineering" it would depend on recognizing
-   the bitwise negation, and xor instructions.</p>
+   the bitwise negation, and xor instructions.<br>Some details of note, if we were encrypting the string
+   within the executable, the bitwise xor with bitwise NOT could be used within the compilation of the program, as such
+   the instructions to look for are the xor operation, for example<br>
+   Suppose (A xor !A) is stored within the readonly data section, let this equal C, then the runtime decryption
+   routine is C xor E, where presumably E or C are either !A or (A xor !A). For this reason xor signifies
+   that an encryption/decryption routine is under execution. It would be interesting to know if there
+   were equivalents to xor, which might be harder to see when reverse engineering a program.
+  </p>
    
    
  
