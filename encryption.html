@@ -18,7 +18,7 @@
    on their own.<br>For instance A xor A is all zeros, and A xor !A or ("not A") is all ones.<br>
    Hence, an encryption scheme can use the bitwise negation, to actually encrypt the data,
    and there exists a way to recover the data, since<br> ((A xor !A) xor !A) == A
-   If this were implemented as a runtime decryption routine, it would depend on recognizing
+   If this were implemented as a runtime decryption routine, "reverse engineering" it would depend on recognizing
    the bitwise negation, and xor instructions.</p>
    
    
