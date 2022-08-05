@@ -9,6 +9,7 @@
 
 </style>
 <body>
+  <h1>Endianness, string creation vs storage</h1>
 <p>There are different ways of concieving of the 'address space', of a program,
    We could refer to the metadata the program assigns to divisions of memory or
    Whether that memory is protected in some fashion or not, we will start with the latter<br>
@@ -46,7 +47,10 @@
     2000 01000200 656c7070 610a00             ....elppa..</i><br>
   We can see clearly the byte sequence for elppa, 65:e, 6c:l, 70:p, 70:p, 61: a
   GCC could have also created the string purely through instructions, as instruction arguments
-  are hardcoded in as instructions. 
+  are hardcoded in as instructions. This needn't be so, we could easily encrypt the string
+  within the read only data section and utilize a runtime decryption routine, to decrypt
+  the string. Reverse engineering this would depend on either knowing the end of the decryption
+  routine, or recognizing the decryption routine and stepping through its contents.
 
   </p>
   
