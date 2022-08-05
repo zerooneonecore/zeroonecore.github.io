@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {background-color: #121212;
+        color: white;}
+  h1 { text-align: center; }
+  #code_1 { border: 2px solid red; }
+  #code_2 { border: 2px solid red; }
+
+</style>
+<body>
+<h1>Rudimentary Encryption</h1>
+<p>Encryption is the means to obfuscate data, but also to recover it.<br>
+   A rudimentary form of encryption is the bitwise exclusive or, or "XOR" operation,
+   bitwise meaning that it operates on bits. an odd number of truth values is true,
+   and an even number is false. There are a couple of interesting features of xor,
+   on their own.<br>For instance A xor A is all zeros, and A xor !A or ("not A") is all ones.<br>
+   Hence, an encryption scheme can use the bitwise negation, to actually encrypt the data,
+   and there exists a way to recover the data, since ((A xor !A) xor !A) == A
+   If this were implemented as a runtime decryption routine, it would depend on recognizing
+   the bitwise negation, and xor instructions.</p>
+   
+   
+ 
+</body>
+</html>
