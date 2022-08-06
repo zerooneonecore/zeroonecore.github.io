@@ -25,7 +25,15 @@
    Suppose (A xor !A) is stored within the readonly data section, let this equal C, then the runtime decryption
    routine is C xor E, where presumably E or C are either !A or (A xor !A). For this reason xor signifies
    that an encryption/decryption routine is under execution. It would be interesting to know if there
-   were equivalents to xor, which might be harder to see when reverse engineering a program.
+   were equivalents to xor, which might be harder to see when reverse engineering a program.<br>
+   The equation <i>((A xor !A) xor !A) == A</i> can be demonstrated with the following c code,
+   <strong>char * A = "elppa\n";</strong
+     6 printf("%c\n", ((*(A) ^ ~(*(A))) ^ ~(*(A))));
+  
+     
+
+
+  
   </p>
    
    
