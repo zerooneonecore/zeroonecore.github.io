@@ -27,8 +27,8 @@
    that an encryption/decryption routine is under execution. It would be interesting to know if there
    were equivalents to xor, which might be harder to see when reverse engineering a program.<br>
    The equation <i>((A xor !A) xor !A) == A</i> can be demonstrated with the following c code,
-   <br><strong>char * A = "elppa\n"</strong<br>
-   <strong>printf("%c\n", ((*(A) ^ ~(*(A))) ^ ~(*(A))))</strong><br>
+   <br><strong>char * A = "elppa\n"<br>
+               printf("%c\n", ((*(A) ^ ~(*(A))) ^ ~(*(A))))</strong><br>
    <p>
    This can be decomposed as per, we have a string, and we dereference the first byte with <i>*(A)</i>,
   <i>*</i> is the dereference operator, and A is the argument. So the bitwise negation of A, is the NOT
