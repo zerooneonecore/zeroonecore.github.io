@@ -5,7 +5,7 @@
   body {background-color: #121212;
         color: white;}
   h1 { text-align: center; }
-  #code_1 { border: 2px solid white; width: 50%; margin: auto;}
+  #code_1 { border: 2px solid white; width: 50%; margin: auto; padding: 2px;}
   #code_2 { border: 2px solid red; }
 
 </style>
@@ -36,7 +36,8 @@
   <i>*</i> is the dereference operator, and A is the argument. So the bitwise negation of A, is the NOT
    of the first byte, which is *(A), NOTTED, which becomes ~(*(A)), we xor these two together, using
    paranthesis to ensure we do this first, and then bitwise xor this again with the NOT of A, what will 
-  be printed is the original first character, 'e'
+  be printed is the original first character, 'e' or A with respect to the equation <i>((A xor !A) xor !A) == A</i>
+     
   </p>
   
      
