@@ -5,6 +5,7 @@
   body {background-color: #121212;
         color: white;}
   h1 { text-align: center; }
+  h2 { text-align: center; }
   #code_1 { margin: auto; font-weight: bold; width: 50%;} 
 
 </style>
@@ -37,7 +38,10 @@ raw bytes are edited, and their position in the file determines the beginning of
   is to resolve this into an actual path on the machine. A quick and dirty way to do this is to merely
   preprocess any c file with the header file we want to locate and grep for the include path. The command used was <br><i><strong>cpp &lt;filename.c&gt; | grep
   "&lt;headerfilehere.h&gt;"</strong></i>, essentially we can just write the header file to the c source file, and then run this command
-  and it will show the actual path that was found.
+  and it will show the actual path that was found.</p>
+  <h2>Interpreting header file definitions</h2>
+  <p>A common pattern across c header files is the <i><strong>typedef struct</strong></i> pattern
+  </p>
 
   
 
