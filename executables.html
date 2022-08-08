@@ -32,7 +32,9 @@ What does consistently provide the order of data structures, however, is the def
 by the linux kernel for example. This order is necessary because in order to create your own executable,
 raw bytes are edited, and their position in the file determines the beginning of data structures and their meaning.
   Hence the identity of a data structure is a name with respect to one reader, and a byte position in the other. 
-  
+  Then, how should we extract this information from the environment? the <i>man elf</i> command provides a clue
+  as to the right header file to consult, <i><strong>#include &lt;elf.h&gt;</strong></i>, 
+
   
 
 </p>
