@@ -40,7 +40,9 @@ raw bytes are edited, and their position in the file determines the beginning of
   "&lt;headerfilehere.h&gt;"</strong></i>, essentially we can just write the header file to the c source file, and then run this command
   and it will show the actual path that was found.</p>
   <h2>Interpreting header file definitions</h2>
-  <p>A common pattern across c header files is the <i><strong>typedef struct</strong></i> pattern
+  <p>A common pattern across c header files is the <i><strong>typedef struct</strong></i> pattern, what we will
+     try to do is to convert these definitions into actionable byte offsets which we can use to eventually construct
+     an actual executable.
   </p>
 
   
