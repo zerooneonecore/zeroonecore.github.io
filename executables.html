@@ -18,7 +18,22 @@ said to be a set of instructions, perhaps to jump to with a jmp instruction, but
 the facilities of the operating system are already enjoyed. <br>
 To refine the question, what is needed at minimum, for a program to enjoy the facilities of the
 operating system within userspace? To answer this question will need none other than to familiarize
-ourselves with the ELF file format, 
+ourselves with the ELF file format, as well as, how should we answer this question?<br>
+We could read the ELF file format specification, but these sorts of documents often do not
+specify all the details needed for implementation, they may specify what data structures are included, their
+names, and purpose, but perhaps not the order of the data structures. It's likely that the first byte
+of the file being the byte used to identify the file is common across different implementations, but in general
+order is within the domain of optimization and implementation. There is a caveat in that the specification
+of a file format for parsing goes hand in hand with the order of such data structures. However, provided
+the list of names of data structures provides the offsets from the file for locating those data structures,
+they do not necessarily need to be in a specific order. This does assume the list of names is parsed in
+O(n) time, but this list is likely to be small, and generally programs are not rerun over and over again.
+What does consistently provide the order of data structures, however, is the definition of them as defined
+by the linux kernel for example. This order is necessary because in order to create your own executable,
+raw bytes are edited, and their position in the file determines the beginning of data structures and their meaning.
+
+  
+
 </p>
 </body>
 </html>
