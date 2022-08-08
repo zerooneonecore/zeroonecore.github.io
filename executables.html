@@ -36,7 +36,7 @@ raw bytes are edited, and their position in the file determines the beginning of
   as to the right header file to consult, <i><strong>#include &lt;elf.h&gt;</strong></i>, what remains
   is to resolve this into an actual path on the machine. A quick and dirty way to do this is to merely
   preprocess any c file with the header file we want to locate and grep for the include path. The command used was <br><i><strong>cpp &lt;filename.c&gt; | grep
-  "&lt;headerfilehere.h&gt;", essentially we can just write the header file to the c source file, and then run this command
+  "&lt;headerfilehere.h&gt;"</strong></i>, essentially we can just write the header file to the c source file, and then run this command
   and it will show the actual path that was found.
 
   
