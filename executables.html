@@ -43,7 +43,10 @@ raw bytes are edited, and their position in the file determines the beginning of
   <p>A common pattern across c header files is the <i><strong>typedef struct</strong></i> pattern, what we will
      try to do is to convert these definitions into actionable byte offsets which we can use to eventually construct
      an actual executable. Rather than dealing with the idiosyncrasies of text editors and hex editors, i found it easier
-    to write c code to construct these files, with absolute certainty of what is getting written.
+    to write c code to construct these files, with absolute certainty of what is getting written. 
+    As a somewhat more major topic, this intersects with the topic of serialization, as to how the definition of a 
+    data structure, such as a struct, is converted into a stream of bytes which can be passed to a write() syscall
+    to write to a file.
   </p>
 
   
