@@ -46,7 +46,11 @@ raw bytes are edited, and their position in the file determines the beginning of
     As a somewhat more major topic, this intersects with the topic of serialization, as to how the definition of a 
     data structure, such as a struct, is converted into a stream of bytes which can be passed to a write() syscall
     to write to a file. I found the programmatic method of constructing an ELF file to be a rather mountainous task, so I opted
-    to try to simplify the problem definition. 
+    to try to simplify the problem definition. Specifically, I found calculating the header offsets to be problematic, 
+    and opted to write a function for this. It would have to take as an argument, a struct, or perhaps a member to
+    a struct, and determine the offset in bytes from the beginning of the file. This presented an interesting
+    dilemma, since in order to determine the offsets, the struct would have to be initialized, but it could not be initialized
+    with those values, so it would have to use some type of runtime routine for its initialization. 
   </p>
 
   
