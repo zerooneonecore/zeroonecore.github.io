@@ -7,7 +7,7 @@
   h1 { text-align: center; }
   h2 { text-align: center; }
   #code_1 { margin: auto; font-weight: bold; width: 50%;} 
-
+  #math_1 { margin: auto; font-weight: bold; width: 50%;}
 </style>
 <body>
 <h1>
@@ -20,6 +20,12 @@
      appear to be something of a non sequitur, but if we needed to calculate the size of a 'full struct',
      the sizeof() function can return this trivially. If the struct is padded to an even byte multiple,
      then this isn't so difficult, so the task is to determine if a struct is padded. 
+     I first explored whether this was necessary, and found examples where structs were indeed padded by
+     the compiler without special settings but could be padded to different multiples, e.g, <i>4 or 8</i>.
+     Which means given sizeof(A) = 16 for example, we cannot make the assumption as to how many members A
+     it has, as there are different possibilities, for example,
+  <p id="math_1"><i><strong>16 = 4 * 4 = 8 * 2 = 8 + 4 + 4<i></strong></p>
+      
     
   </p>
   </body>
