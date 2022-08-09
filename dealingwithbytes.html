@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {background-color: #121212;
+        color: white;}
+  h1 { text-align: center; }
+  h2 { text-align: center; }
+  #code_1 { margin: auto; font-weight: bold; width: 50%;} 
+
+</style>
+<body>
+<h1>
+ Dealing with bytes
+ </h1>
+  <p>The goal here is to develop some facilities to make working with bytes easier, to facilitate
+     the creation of an ELF file from the structs defined within the header files.<br>
+     The first challenge here is to calculate accurately the size of a partial struct, where a partial
+     struct is a struct, including its first member, truncated to some subsequent member. This may 
+     appear to be something of a non sequitur, but if we needed to calculate the size of a 'full struct',
+     the sizeof() function can return this trivially. If the struct is padded to an even byte multiple,
+     then this isn't so difficult, so the task is to determine if a struct is padded. 
+    
+  </p>
+  </body>
+  </html>
