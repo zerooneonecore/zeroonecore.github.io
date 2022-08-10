@@ -24,9 +24,11 @@
      the compiler without special settings but could be padded to different multiples, e.g, <i>4 or 8</i>.
      Which means given sizeof(A) = 16 for example, we cannot make the assumption as to how many members A
      it has, as there are different possibilities, for example,
-  <p id="math_1"><i><strong>16 = 4 * 4 = 8 * 2 = 8 + 4 + 4<i></strong></p>
+  <p id="math_1"><i><strong>16 = 4 * 4 = 8 * 2 = 8 + 4 + 4</i></strong></p>
     Fortunately, or well, theoretically we don't actually need to deal with a 'partial struct', because
     the section header table and program header table each are their own struct as per <i>man elf</i>.
+    The ELF header table has been more or less covered, the next order of business is the program
+  header table. The two problematic fields are <i>p_vaddr</i>, and <i>p_offset</i>.
     
       
     
