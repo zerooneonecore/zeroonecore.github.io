@@ -26,9 +26,13 @@
      it has, as there are different possibilities, for example,
   <p id="math_1"><i><strong>16 = 4 * 4 = 8 * 2 = 8 + 4 + 4</i></strong></p>
     Fortunately, or well, theoretically we don't actually need to deal with a 'partial struct', because
-    the section header table and program header table each are their own struct as per <i>man elf</i>.
+    the section header table and program header table each are their own struct as per <i>man elf</i>, 
+    hence as long as offsets are calculated to a struct and not its subsequent members, the sizeof()
+    function should work wonderfully for calculating the offsets.
     The ELF header table has been more or less covered, the next order of business is the program
-  header table. The two problematic fields are <i>p_vaddr</i>, and <i>p_offset</i>.
+  header table. The two problematic fields are <i>p_vaddr</i>, and <i>p_offset</i>. The
+  <i>man elf</i> entry does not provide much information as to what constitutes a virtual address, so
+   we may have to consult the ELF specification for this. 
     
       
     
