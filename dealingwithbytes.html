@@ -38,11 +38,14 @@
    this out would be to compile different types of executables, and study the program header tables of them.
   The first program I would compile would be one with hardcoded addresses, referred to as a 'statically 
   linked program'. I used the <i>objdump</i> utility rather than <i>readelf</i> because I found the output
-  more intelligible. 
+  more intelligible. <span>compiled with <i>gcc -static &lt;source.c&gt; -o &lt;outputfile&gt;</></span>
   
- <p id="output_1"><i><strong>Program Header:<br>
+ <br><p id="output_1"><i><strong>Program Header:<br>
     LOAD off    0x0000000000000000 vaddr 0x0000000000400000 paddr 0x0000000000400000 align 2**12
-   </strong></i></p>
+   </strong></i></p><br>
+  
+  Here we have the p_vaddr 0x400000, would the executable be loaded at this address? A quick test with
+  a debugger, gdb, confirms this. 
   
 
   
