@@ -52,11 +52,12 @@
   <br><p id="output_2"><i><strong>(gdb) x 0x400000<br>
             0x400000:	0x464c457f
    </strong></i></p><br>
+  <p>
   What do we recognize here? the unmistakeable string 'ELF', <i>45 -&gt; E, 4c -&gt; L, 46 -&gt; F</i>
   So what is essentially happening is that the program is getting loaded at the 0x400000 address,
   and part of the program header is getting mapped to that address. Why this is necessary is not
   exactly clear. However, why is the program able to be loaded at 0x400000 at all?
-
+  </p>
   
     
       
