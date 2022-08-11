@@ -7,6 +7,8 @@
   h1 { text-align: center; }
   #code_1 { border: 2px solid white; width: 50%; margin: auto; padding: 2px;text-align: center;}
   #code_2 { border: 2px solid red; }
+  #source_1 { border: 2px solid white; width: 50%; margin: auto;}
+
 
 </style>
 <body>
@@ -26,7 +28,10 @@
      but how do we connect them to something substantive? Another tangent. We have to consider the origin of
      the paging information, or at least the entrance from userspace, the process. The indirection is
     task_struct->mm->pgd (<i>Notice pgd: "page global directory"</i>), after this indirection, the 
-    connection to pmd and pte seemed to disperse into a set of functions. 
+    connection to pmd and pte seemed to disperse into a set of functions. Where that leaves us is with
+    <i><strong>pgtable.h</strong></i>, described as<br>
+    <p id="source_1"><i>This file contains the functions and defines necessary to modify and use
+      * the IA-64 page table tree.</i></p><br>
     
   </p>
   </body>
