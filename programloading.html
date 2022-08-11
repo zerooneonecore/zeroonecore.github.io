@@ -37,7 +37,9 @@
   <p class="source"><i>#define _PAGE_A_BIT		5</i></p><br>
     Now, clearly _PAGE_A_BIT isn't actually a bit in that 5 in binary is 101, not a single bit, but it is a
     means to set a bit. Rather it is more like a name for a state, it allows to ask whether _PAGE_A_BIT
-    is set or not. 
+    is set or not. The way it is used to set a bit is as follows,
+    <p class="source"><i>#define _PAGE_A			(1 << _PAGE_A_BIT)	/* page accessed bit */</i></p><br>
+    So what exactly is the role that '<<' is playing? 
     
   </p>
   </body>
