@@ -40,7 +40,10 @@
   </tr>
 </table><br>
     So clearly the page size or some fragment of that value is being set, but under what context? virtual? physical? It's best to see
-    where these configuration parameters are being set. 
+    where these configuration parameters are being set. These are referenced in the Kconfig file, which
+    makes sense, but when is this file read? Well this has to do with the build process and its beyond the
+    scope of this topic, what is important is that these configuration parameters are set very early, 
+    and therefore have a type of authority. 
   </p>
 </body>
 </html>
