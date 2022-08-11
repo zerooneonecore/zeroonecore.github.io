@@ -39,7 +39,10 @@
     means to set a bit. Rather it is more like a name for a state, it allows to ask whether _PAGE_A_BIT
     is set or not. The way it is used to set a bit is as follows,
     <p class="source"><i>#define _PAGE_A			(1 << _PAGE_A_BIT)	/* page accessed bit */</i></p><br>
-    So what exactly is the role that '<<' is playing? 
+    So what exactly is the role that '<<' is playing? First of all lets refresh ourselves a bit on bits.
+  if we initialize a <i>long long int = 1</i>, it will be what we expect, the entire datum will be 1,
+  but if we initialize an <i>int = 1</i>, the lower order bits is what will be used, the rest wont be
+  zero, so something always to keep in mind. 
     
   </p>
   </body>
