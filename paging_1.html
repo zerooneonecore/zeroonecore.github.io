@@ -43,7 +43,10 @@
     where these configuration parameters are being set. These are referenced in the Kconfig file, which
     makes sense, but when is this file read? Well this has to do with the build process and its beyond the
     scope of this topic, what is important is that these configuration parameters are set very early, 
-    and therefore have a type of authority. 
+  and therefore have a type of authority. Continuing to <strong>PTRS_PER_PTD_SHIFT</strong>, it expands
+  to <strong>(PAGE_SHIFT-3</strong>, which means the entire expression expands to <strong>PAGE_SHIFT + (PAGE_SHIFT-3)</strong>
+  I'm tempted to assume that this is equivalent to <strong>(2 * PAGE_SHIFT) - 3</strong>, though I am not
+  sure why they do this, but it does look strange from an arithmetic perspective.
   </p>
 </body>
 </html>
