@@ -48,7 +48,8 @@
   I'm tempted to assume that this is equivalent to <strong>(2 * PAGE_SHIFT) - 3</strong>, though I am not
   sure why they do this, but it does look strange from an arithmetic perspective. Equally interesting along
   this observation is this line here <strong>hmm_pfn_flags_order(PMD_SHIFT - PAGE_SHIFT);</strong>
-  Because if true, this would be equivalent to <strong>hmm_pfn_flags_order(PTRS_PER_PTD_SHIFT);</strong>
+  Because if true, this would be equivalent to <span><strong>hmm_pfn_flags_order(PTRS_PER_PTD_SHIFT);</strong></span>
+  
   
   </p>
 </body>
