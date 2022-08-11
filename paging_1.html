@@ -51,6 +51,13 @@
   sure why they do this, but it does look strange from an arithmetic perspective. Equally interesting along
   this observation is this line here <strong>hmm_pfn_flags_order(PMD_SHIFT - PAGE_SHIFT);</strong>
   Because if true, this would be equivalent to <span><i>hmm_pfn_flags_order(PTRS_PER_PTD_SHIFT);</i></span>
+  Now then, where is <strong>PMD_SHIFT</strong> referenced? A lot of it is referenced in the <strong>ivt.S</strong>
+  file, which concerns the interrupt vector tables, and a lot of interesting stuff is here. So in conclusion,
+  the general pattern is that the masks are built via bitwise shifts, often in c source files, the bit
+  setting is done via xor, AND, and frequently in assembly files, as this is where the architecture
+  can be optimized. This makes sense, as the bit flags should be as invariant as possible, and flags
+  are essentially another term for a mask. One difference between the language of masks and flags is that you can 
+  mask something, <i>e.g, set a bit</i>, but you typically don't 'flag' something, you have flags that you can set.
   
   
   </p>
