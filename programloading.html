@@ -34,7 +34,7 @@
       * the IA-64 page table tree.</i></p><br>
   The <i><strong>pgtable.h</strong></i> file under arch <i>ia64</i> starts by defining various "bits", but
   what is interesting here is that they aren't bits in a literal sense. For example, take the line
-  <p class="source"><i>#define _PAGE_A_BIT		5<i></p><br>
+  <p class="source"><i>#define _PAGE_A_BIT		5</i></p><br>
     Now, clearly _PAGE_A_BIT isn't actually a bit in that 5 in binary is 101, not a single bit, but it is a
     means to set a bit. Rather it is more like a name for a state, it allows to ask whether _PAGE_A_BIT
     is set or not. 
