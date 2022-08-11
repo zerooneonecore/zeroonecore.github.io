@@ -18,7 +18,11 @@
      is that it does not use segmentation in '64 bit mode'. Hence our question reduces to figuring out paging.
      The entry point to the paging system is really the TLB, a cache, if there is a cache hit, then the
      translated address is returned immediately, if there is a cache miss, then the address will have to be
-     computed following. 
+     computed following. The paging language refers to 'levels', and what this refers to is different
+     levels of a tree structure. Software is not a static entity, so it is not unusual that multiple levels
+     of a tree data structure could grow in the future, the common description, however, is in terms of
+     three level page hierarchies. As per having a page global directory, page middle directory, and
+     page table entry. These are in depth first order, 
     
   </p>
   </body>
