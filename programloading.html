@@ -74,10 +74,8 @@
        <td>0000000000000000000000000000000000000000000000000000000000000001</td>
      </tr>
 </table><br>
-So the number of trailing zeros is equal to the shifting value, does this work for every value which is
-shifted? No, its not as well behaved for values which arent single bits, specifically, it works 
-if the value to shift is a power of 2. To understand this, its helpful to see how bit positions map
-to powers of 2. 
+So the number of trailing zeros is equal to the shifting value, the reason this works is easier to see
+  by considering powers of 2.
   <table class="source">
   <tr>
     <th>Expression</th>
@@ -104,7 +102,12 @@ to powers of 2.
     <td>0000000000000000000000000000000000000000000000000000000000010000</td>
   </tr>
 </table><br>
-  Hence even if we select a power of 2 at random, it will work. 
+  Hence even if we select a power of 2 at random, it will work. What we are building here, with the shift
+  operation, are masks. These masks can later be used to set a bit, and are essentially a method of
+  setting state applied to bits. This language is used in the linux kernel, amongst other programming
+  involving bits.<p class="source"><i>#define _PAGE_PL_MASK		(3 <<  7)</i></p><br>
+  
+  
  
     
   </p>
