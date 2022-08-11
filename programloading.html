@@ -14,7 +14,9 @@
   <p>Really, the only proper way to figure out what 0x400000 means is to understand how memory addresses
      work under linux, which will probably be a huge tangent but interesting and fruitful in itself.
      So the core of this is the MMU, which translates virtual addresses to physical addresses, an ubiquitious
-     description. 
+     description. The next question is whether the MMU uses segmentation or paging on x86-64, and the answer
+     is that it does not use segmentation in '64 bit mode'. Hence our question reduces to figuring out paging.
+    
   </p>
   </body>
   </html>
