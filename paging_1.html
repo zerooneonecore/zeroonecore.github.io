@@ -7,11 +7,39 @@
   h1 { text-align: center; }
   #code_1 { border: 2px solid red; }
   #code_2 { border: 2px solid red; }
-
+  .format { width: 50%; margin: auto; border: 2px solid white; }
 </style>
 <body>
 <h1>Paging continued</h1>
   <p>There is no shortcut I have found for understanding the kernel, it is a diverse and, understandably
-     idiosyncratic document.  
+     idiosyncratic document.<br>
+    <i><strong>#define PMD_SHIFT	(PAGE_SHIFT + (PTRS_PER_PTD_SHIFT))</i></strong><br>
+    We will simply go through as much of the <strong>paging.h</strong> file as we can, (<i>arch ia64</i>),
+    So what is <strong>PAGE_SHIFT</strong>? Well, it depends on the configuration, and the configuration,
+    like many things, is best seen through a table.<br>
+    <table class="format">
+  <tr>
+    <th>Configuration</th>
+    <th>PAGE_SHIFT value</th>
+  </tr>
+  <tr>
+    <td>CONFIG_IA64_PAGE_SIZE_4KB</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>CONFIG_IA64_PAGE_SIZE_8KB</td>
+    <td>13</td>
+  </tr>
+     <tr>
+    <td>CONFIG_IA64_PAGE_SIZE_16KB</td>
+    <td>14</td>
+  </tr>
+     <tr>
+    <td>CONFIG_IA64_PAGE_SIZE_64KB</td>
+    <td>16</td>
+  </tr>
+</table><br>
+    Placeholder,
+  </p>
 </body>
 </html>
