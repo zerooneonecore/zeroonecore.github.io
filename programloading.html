@@ -42,21 +42,37 @@
     So what exactly is the role that '<<' is playing? First of all lets refresh ourselves a bit on bits.
   if we initialize a <i>long long int = 1</i>, it will be what we expect, the entire datum will be 1,
   but if we initialize an <i>int = 1</i>, the lower order bits is what will be used, the rest wont be
-  zero, so something always to keep in mind. So lets look at the shifting in action.
-   <p class="source"><i> <table>
+  zero, so something always to keep in mind. So lets look at the shifting in action.</p>
+   <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
+    <th>Expression</th>
+    <th>Result</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
+    <td>1 << 5</td>
+    <td>0000000000000000000000000000000000000000000000000000000000100000</td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
+    <td>1 << 4</td>
+    <td>0000000000000000000000000000000000000000000000000000000000010000</td>
   </tr>
-</table> </i></p><br>
+     <tr>
+    <td>1 << 3</td>
+    <td>0000000000000000000000000000000000000000000000000000000000001000</td>
+  </tr>
+     <tr>
+    <td>1 << 2</td>
+    <td>0000000000000000000000000000000000000000000000000000000000000100</td>
+  </tr>
+     <tr>
+    <td>1 << 1</td>
+    <td>0000000000000000000000000000000000000000000000000000000000000010</td>
+  </tr>
+     <tr>
+       <td>1 << 0</td>
+       <td>0000000000000000000000000000000000000000000000000000000000000001</td>
+     </tr>
+</table>
 
     
   </p>
