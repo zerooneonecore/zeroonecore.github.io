@@ -16,6 +16,9 @@
      So the core of this is the MMU, which translates virtual addresses to physical addresses, an ubiquitious
      description. The next question is whether the MMU uses segmentation or paging on x86-64, and the answer
      is that it does not use segmentation in '64 bit mode'. Hence our question reduces to figuring out paging.
+     The entry point to the paging system is really the TLB, a cache, if there is a cache hit, then the
+     translated address is returned immediately, if there is a cache miss, then the address will have to be
+     computed following. 
     
   </p>
   </body>
