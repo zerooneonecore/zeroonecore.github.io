@@ -29,6 +29,30 @@
  * When control is transferred to _start, the bootload has already
  * loaded us to the correct address.  All that's left to do here is
  * to set up the kernel's global pointer and jump to the kernel
-    * entry point.</i></p>
+    * entry point.</i></p><br>
+  The very first line, and a very common line is <strong>GLOBAL_ENTRY(_start)</strong> or <strong>ENTRY(arg)</strong>,
+  the expansion is as follows.
+  <table class="source">
+  <tr>
+    <th>Macro Name</th>
+    <th>Macro Definition</th>
+    <th>Macro Expansion</th>
+  </tr>
+  <tr>
+    <td>1 << 5</td>
+    <td>0000000000000000000000000000000000000000000000000000000000100000</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1 << 4</td>
+    <td>0000000000000000000000000000000000000000000000000000000000010000</td>
+    <td>1</td>
+  </tr>
+     <tr>
+    <td>1 << 3</td>
+    <td>0000000000000000000000000000000000000000000000000000000000001000</td>
+  </tr>
+</table><br>
+  
   </body>
   </html>
