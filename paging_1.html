@@ -59,7 +59,14 @@
   can be optimized. This makes sense, as the bit flags should be as invariant as possible, and flags
   are essentially another term for a mask. One difference between the language of masks and flags is that you can 
   mask something, <i>e.g, set a bit</i>, but you typically don't 'flag' something, you have flags that you can set.
-  <h2>The interrupt vector table</h2>
+  <h2>The interrupt vector table</h2><br>
+  The interrupt vector table is, broadly, a collection of routines written in assembly language. 
+  Assembly language is unique in that the assembler used, (<i>NASM, YASM, MASM, GAS</i>), can indeed
+  affect the syntax that is used. Hence I can recall assembly language referred to as 'assembler', by some
+  of the older generation, and this would not necessarily be a misnomer with this knowledge. For example,
+  In one assembler, MASM, the line <strong>mov AL, [RIP]</strong> means something different than in other
+  assemblers such as NASM,YASM,FASM.
+  
   
   </p>
 </body>
