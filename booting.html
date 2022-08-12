@@ -19,5 +19,14 @@
   everywhere, and this wasn't seeming to yield any results. What I did know is that the kernel has to interface
   in some way with the BIOS/firmware, and decided to try searching "ROM, BIOS, firmware". An install script
   within the architecture specific directory for ia64 made a reference to <strong>"vmlinuz"</strong> and <strong>"System.map"</strong>
+  I continued to dig around and finally found the ia64 file <strong>"/kernel/head.S"</strong>, with a
+  promising note<br>
+  
+  <p class="source"><i>
+ * Here is where the ball gets rolling as far as the kernel is concerned.
+ * When control is transferred to _start, the bootload has already
+ * loaded us to the correct address.  All that's left to do here is
+ * to set up the kernel's global pointer and jump to the kernel
+    * entry point.</i></p>
   </body>
   </html>
