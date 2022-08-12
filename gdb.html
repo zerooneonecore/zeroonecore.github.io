@@ -41,7 +41,9 @@
   of murphys law, the <i>run</i> command proved elusive, it was not in that file at all...
   <br>This was getting a bit ridiculous, the lightbulb came on and I sort of remembered debuggers working
   via an <i>execve()</i> call and then a <i>ptrace</i>, so maybe run was just a simple wrapper around <i>execve</i>?
-  
+  Or so I thought, returning to the drawing board, I decided to search another string, whenever gdb runs a program,
+  it outputs the string <strong>Starting program</strong>, I suppose I didn't search for this first because
+  it wasn't the direct error message I was getting, but it is probably connected with an if else clause.
 
     
   </p>
