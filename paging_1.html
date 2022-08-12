@@ -69,8 +69,11 @@
   'language' itself. Moving on, the interrupt vector table uses one global label <i>ia64_ivt:</i>,
   The general consensus is that the assembler used with linux is gas, the gas documentation at the time
   of this writing is packaged under bin utils as an aside. Within the <i>ia64_ivt:</i> global label, 
-  there is a pattern of the function ENTRY, taking as an argument a name*, and executing a block of
-  assembly code depending on the configuration used. 
+  there is a pattern of the function ENTRY, taking as an argument a name, and executing a block of
+  assembly code depending on the configuration used. What is not clear is where ENTRY is called, 
+  as i could not find cross references, this could be where the buck stops and the interrupt vector table
+  is called via some sort of ambiguous function pointer mechanism, it would behoove us to figure out
+  how the kernel boot sequence works to clarify some of these questions.<a href="booting.html">Next</a>
   
   
   </p>
