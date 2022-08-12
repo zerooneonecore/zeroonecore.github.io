@@ -18,6 +18,9 @@
     downloaded the source and did a recursive grep for <strong>"run"</strong>, this was not fruitful
     to say the least. 'run' is an extremely common name, but I had an idea, the error message that
     <i>run</i> returned was <i>During startup program exited with code 127.</i>I might be able to
-    grep for where this interfaces with the rest of the program.</p>
+    grep for where this interfaces with the rest of the program. This turned up results, but
+    annoyingly, the string was referenced in gdbs 'testsuite' files, indicating a possibility that
+    this may not be its legitimate functionality. Still, the string was referenced in <i><strong>.exp</strong></i> files, 
+    so I decided to see if looking into <i><strong>.exp</strong></i> files yielded anything</p>
   </body>
   </html>
