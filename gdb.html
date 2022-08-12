@@ -32,7 +32,14 @@
   <br><p class="source"><i>/* Chain containing all defined commands.<br>
     extern struct cmd_list_element *cmdlist;</i>
     </p>
-  So gdb must be keeping the commands in a linked list. 
+  So gdb must be keeping the commands in a linked list. I had now found the <strong>gdb/cli-cmds.c</strong> file
+  and noticed a function returning a string ,
+  <i>error (_("The \"pwd\" command does not take an argument: %s"), args);</i><br>As an acid test, I ran
+  the <i>pwd</i> command with an argument within gdb, and it indeed returned,
+  <strong><i>The "pwd" command does not take an argument: s</i></strong>, this was a good sign that I was
+  in the right place.
+
+
     
   </p>
   </body>
