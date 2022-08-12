@@ -31,7 +31,7 @@
  * to set up the kernel's global pointer and jump to the kernel
     * entry point.</i></p><br>
   The very first line, and a very common line is <strong>GLOBAL_ENTRY(_start)</strong> or <strong>ENTRY(arg)</strong>,
-  the expansion is as follows.
+  the expansion is as follows.<br>
   <table class="source">
   <tr>
     <th>Macro Name</th>
@@ -39,18 +39,17 @@
     <th>Macro Expansion</th>
   </tr>
   <tr>
-    <td>1 << 5</td>
-    <td>0000000000000000000000000000000000000000000000000000000000100000</td>
+    <td>GLOBAL_ENTRY(name)</td>
+    <td>.global name;<br>			
+	      ENTRY(name)</td>
     <td>1</td>
   </tr>
   <tr>
-    <td>1 << 4</td>
-    <td>0000000000000000000000000000000000000000000000000000000000010000</td>
+    <td>ENTRY(name)</td>
+    <td>.align 32;<br>			
+	       .proc name;<br>				
+          name:</td>
     <td>1</td>
-  </tr>
-     <tr>
-    <td>1 << 3</td>
-    <td>0000000000000000000000000000000000000000000000000000000000001000</td>
   </tr>
 </table><br>
   
