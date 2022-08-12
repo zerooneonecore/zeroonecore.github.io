@@ -68,7 +68,9 @@
   assemblers such as NASM,YASM,FASM. This means the assembler used in some ways is congruent with the
   'language' itself. Moving on, the interrupt vector table uses one global label <i>ia64_ivt:</i>,
   The general consensus is that the assembler used with linux is gas, the gas documentation at the time
-  of this writing is packaged under bin utils as an aside. 
+  of this writing is packaged under bin utils as an aside. Within the <i>ia64_ivt:</i> global label, 
+  there is a pattern of the function ENTRY, taking as an argument a name*, and executing a block of
+  assembly code depending on the configuration used. 
   
   
   </p>
