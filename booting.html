@@ -71,7 +71,16 @@
 	except for having to remove a duplicate main() symbol. As in, the "main" routine is really just
 	an ordinary function, so it can't be defined twice when linking two object files together.
 	The result of linking both object files together is that both functions from each linked object file
-	were available in the outputted object file. 
+	were available in the outputted object file. <i>readelf</i< and other utilites read the file 
+	as an executable, but apparently an executable can be completely useless, as i was not expecting
+	the following output.<br>
+	<p class="source"><strong>file output</strong><br>
+output: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib/ld64.so.1, not stripped<br>
+		<strong>./output</strong><br>
+		<i>bash: ./output: No such file or directory</i>
+	</p><br>
+	Placeholder
+	
   
   </body>
   </html>
