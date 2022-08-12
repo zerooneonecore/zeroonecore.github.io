@@ -67,9 +67,8 @@
 	takes names in the object files, and binds them to addresses or the means to obtain an address.
 	So what is the purpose behind combining multiple object files? why not just one? Does this mean we
 	can link two arbitrary object files together? I linked two arbitrary object files together with
-	the command <strong><i>ld -o output bytes.o helloworld.o -lc<i></strong>, which worked perfectly
-	except for hald -o output bytes.o helloworld.o -lc
-ving to remove a duplicate main() symbol. As in, the "main" routine is really just
+	the command <strong><i>ld -o output bytes.o helloworld.o -lc</i></strong>, which worked perfectly
+	except for having to remove a duplicate main() symbol. As in, the "main" routine is really just
 	an ordinary function, so it can't be defined twice when linking two object files together.
 	The result of linking both object files together is that both functions from each linked object file
 	were available in the outputted object file. 
