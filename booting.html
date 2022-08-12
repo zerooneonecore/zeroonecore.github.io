@@ -42,14 +42,20 @@
     <td>GLOBAL_ENTRY(name)</td>
     <td>.global name;<br>			
 	      ENTRY(name)</td>
-    <td>1</td>
+    <td>.global name;
+	 .align 32;<br>			
+	 .proc name;<br>				
+          name:<br>
+	  </td>
   </tr>
   <tr>
     <td>ENTRY(name)</td>
     <td>.align 32;<br>			
 	       .proc name;<br>				
           name:</td>
-    <td>1</td>
+    <td>.align 32;<br>			
+	.proc name;<br>				
+         name:</td>
   </tr>
 </table><br>
   
