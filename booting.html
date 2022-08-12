@@ -79,7 +79,11 @@ output: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked,
 		<strong>./output</strong><br>
 		<i>bash: ./output: No such file or directory</i>
 	</p><br>
-	The root cause of this, I believe, is that there is a missing _start section. 
+	The root cause of this, I believe, is that there is a missing _start section. I loaded this into gdb,
+	believing I could debug it, but despite it being able to load the <i>main</i> section, i could not 
+	even run it in gdb. This presented two choices, either I could go the route of reading more about
+	the linker, or I could see how gdb works with its <i>run</i> command. I decided to take the latter
+	option. <a href="gdb.html">Next</a>
 	
   
   </body>
