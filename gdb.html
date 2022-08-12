@@ -29,10 +29,10 @@
     This indicated that this was a variable that would be modified by the user of the library, which in this
   case was gdb. Grepping for this led to <strong>gdb/gdbcmd.h</strong>, which in itself indicated another
   interesting line.<br>
-  <p class="source"><i>/* Chain containing all defined commands.<br>
+  <br><p class="source"><i>/* Chain containing all defined commands.<br>
     extern struct cmd_list_element *cmdlist;</i>
     </p>
-
+  So gdb must be keeping the commands in a linked list. 
     
   </p>
   </body>
