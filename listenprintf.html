@@ -26,7 +26,9 @@
                            It is handled with the usual open, read, write, ioctl and close system calls.</i></p></br>
     This should mean that a write syscall should be all that is necessary to monitor when inferring a write
     to standard output since no other writers exist. Our problem then reduces, or perhaps increases, 
-    to that of monitoring userspace programs for syscalls.
+    to that of monitoring userspace programs for syscalls. So, how do user space programs call system
+    calls, and furthermore, will this produce any problems for the stack trace mechanism?
+  
     
      </p>
   </body>
