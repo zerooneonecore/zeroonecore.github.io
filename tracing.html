@@ -47,7 +47,9 @@
   This indeed confirmed that <i>print_exception()</i> was the relevant function and that it was called
   from within <i>start_event_loop()</i>. <i>start_event_loop()</i> was defined within the file
   <strong><i>gdb/event-loop.c</i></strong>. apparently gdb was using a try catch exception
-  handler and this was within the <i>start_event_loop()</i> function. 
+  handler and this was within the <i>start_event_loop()</i> function. This meant that whatever exception catch
+  was catching, it originated within the try block, and the function within the try block here is 
+  <i>gdb_do_one_event()</i>
   
   
 </body>
