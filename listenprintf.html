@@ -30,7 +30,8 @@
     calls, and furthermore, will this produce any problems for the stack trace mechanism? I had read that
   glibc had wrappers for syscalls, and this would simplify things since uhh, it would give the name of
   a function to monitor, rather than having to wait for some specific assembly instructions/opcodes.
-  
+  The more I read, the more it was looking as if i would have to solely monitor syscall(), or syscall() and
+  whatever glibs wrapper for the write syscall was, if it did exist. 
   
     
      </p>
