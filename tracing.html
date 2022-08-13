@@ -18,7 +18,7 @@
   Anyway, so lets trace some syscalls with strace, lets trace gdb. First of all, running the command
   <strong>strace gdb</strong> will make gdb unuseable, it will essentially just completely take over
   standard output. The better way to go about it is <strong>strace --attach=&lt;pid&gt;</strong>, then you will be
-  privy to the sea of output from strace. getting the pid from <i>ps</i> and <i>grep</i> is kind of
-  annoying, maybe gdb could be kind enough to provide it. 
+  privy to the sea of output from strace. So first of all we know that we want to trace only the <strong>write()</strong>
+  system call, so maybe strace can be filtered on its system calls. 
 </body>
 </html>
