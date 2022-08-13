@@ -19,6 +19,8 @@
   <strong>strace gdb</strong> will make gdb unuseable, it will essentially just completely take over
   standard output. The better way to go about it is <strong>strace --attach=&lt;pid&gt;</strong>, then you will be
   privy to the sea of output from strace. So first of all we know that we want to trace only the <strong>write()</strong>
-  system call, so maybe strace can be filtered on its system calls. 
+  system call, so maybe strace can be filtered on its system calls. This doesn't scratch the surface of the
+  <strong>--trace</strong> option, but we can filter on the <i>write()</i> syscall with the following command,
+  <strong>sudo strace --trace=<i>write</i> --attach=&lt;pid&gt;</strong>
 </body>
 </html>
