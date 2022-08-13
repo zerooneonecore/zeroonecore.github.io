@@ -39,7 +39,10 @@
                                 gdb(start_event_loop() [clone .cold]+0x1e) [0xc5fe2]
       </i></p><br>
   This suggested that the exception for a missing file in <i>run</i> was thrown from within the <i>start_event_loop()</i>
-  function. 
+  function. Now it was time to see whether <i>print_exception()</i> would occur in a stack trace with an
+  existing file. It seemed to disappear with a working program, but I wasn't fully confident, because it was
+  an absurd amount of output, most if it from gdb rather than shared libraries. So I decided to return
+  the original useless executable. 
   
 </body>
 </html>
