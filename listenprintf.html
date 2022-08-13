@@ -31,7 +31,9 @@
   glibc had wrappers for syscalls, and this would simplify things since uhh, it would give the name of
   a function to monitor, rather than having to wait for some specific assembly instructions/opcodes.
   The more I read, the more it was looking as if i would have to solely monitor syscall(), or syscall() and
-  whatever glibs wrapper for the write syscall was, if it did exist. 
+  whatever glibs wrapper for the write syscall was, if it did exist. I wasn't having the best of luck
+  grepping for glibc wrappers or 'sycall', and I wasn't willing to comb through an excess of output.
+  In addition, a lot of the function names were mangled and this was not helping either.
   
     
      </p>
