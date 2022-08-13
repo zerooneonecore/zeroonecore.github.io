@@ -5,6 +5,7 @@
   body {background-color: #121212;
         color: white;}
   h1 { text-align: center; }
+  h2 { text-align: center; }
   #code_1 { border: 2px solid white; width: 50%; margin: auto; padding: 2px;text-align: center;}
   #code_2 { border: 2px solid red; }
   .source { border: 2px solid white; width: 50%; margin: auto; padding: 4px; text-align: center;}
@@ -29,6 +30,16 @@
   rather nicely, it was producing stack traces, which I had to remind myself are read from bottom to top,
   terminating on the <i>write()</i> syscall.
 
+  <h2>Examining stack traces</h2>
+  
+  The goal now was to figure out what I wanted to know from the stack traces, of course, a different stack trace
+  would be produced from a different result in gdb. For example, the stack trace on <strong>run</strong>
+  with no arguments results in the following output.
+  <br><br><p class="source"><i>gdb(print_exception(ui_file*, gdb_exception const&)+0x4a) [0x21078a]<br>
+                                gdb(start_event_loop() [clone .cold]+0x1e) [0xc5fe2]
+      </i></p><br>
+  This suggested that the exception for a missing file in <i>run</i> was thrown from within the <i>start_event_loop()</i>
+  function. 
   
 </body>
 </html>
