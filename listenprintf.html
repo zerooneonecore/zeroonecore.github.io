@@ -22,7 +22,7 @@
     <br><p class="source"><i>The program requests data transfer with the write operation.</i></p></br>
     Did this mean that the write syscall acted as a bonafide representative of writing to standard output?
     I next came across this line from a linux journal article regarding FILE streams, 
-    <br><p class="source"><i>The user perceives a STREAM as a file.<br>
+    <br><br><p class="source"><i>The user perceives a STREAM as a file.<br>
                            It is handled with the usual open, read, write, ioctl and close system calls.</i></p></br>
     This should mean that a write syscall should be all that is necessary to monitor when inferring a write
     to standard output since no other writers exist.
