@@ -44,7 +44,9 @@ Debug registers are privileged resources; a MOV instruction that accesses these 
 real-address mode, in SMM or in protected mode at a CPL of 0. An attempt to read or write the debug registers
   from any other privilege level generates a general-protection exception (#GP)</i></p><br>
   The long and short of it is that the <i>debug registers</i> cannot be used in userspace, which explains why
-  <i>ptrace</i> is a system call, because it must request the kernels facilities.
+  <i>ptrace</i> is a system call, because it must request the kernels facilities. Anyway, the ptrace API
+  is not complicated, the difficulty is that supplying its arguments requires knowledge of the debugged programs
+  address space. <a href="tracing.html">Next</a></p>
   
     
      </p>
