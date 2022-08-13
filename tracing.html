@@ -42,7 +42,9 @@
   function. Now it was time to see whether <i>print_exception()</i> would occur in a stack trace with an
   existing file. It seemed to disappear with a working program, but I wasn't fully confident, because it was
   an absurd amount of output, most if it from gdb rather than shared libraries. So I decided to return
-  the original useless executable. 
+  to the original useless executable. I knew the specific error message that was being printed, and this
+  indeed was found within the stack trace, so I decided to log the strace output and begin to grep.
+  
   
 </body>
 </html>
