@@ -36,7 +36,15 @@
   In addition, a lot of the function names were mangled and this was not helping either. It seemed
   that reverse engineering was culminating, you either required intimate knowledge of names used within
   the program, or you required intimate knowledge of the nitty gritty machine details, both of course being
-  ideal. One of those however, is worth the time. 
+  ideal. One of those however, is worth the time. The intel software developers manual mentions the following
+  line, 
+  <br><br><p class="source"><i>Vol. 3B 17-3
+DEBUG, BRANCH PROFILE, TSC, AND INTEL® RESOURCE DIRECTOR TECHNOLOGY (INTEL® RDT) FEATURES
+Debug registers are privileged resources; a MOV instruction that accesses these registers can only be executed in
+real-address mode, in SMM or in protected mode at a CPL of 0. An attempt to read or write the debug registers
+  from any other privilege level generates a general-protection exception (#GP)</i></p><br>
+  The long and short of it is that the <i>debug registers</i> cannot be used in userspace, which explains why
+  <i>ptrace</i> is a system call, because it must request the kernels facilities.
   
     
      </p>
