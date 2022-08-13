@@ -14,5 +14,10 @@
 </style>
 <body>
   <h1>Tracing programs, maybe gdb</h1><br>
+  
+  Anyway, so lets trace some syscalls with strace, lets trace gdb. First of all, running the command
+  <strong>strace gdb</strong> will make gdb unuseable, it will essentially just completely take over
+  standard output. The better way to go about it is strace --attach=&lt;pid&gt;, then you will be
+  privy to the sea of output from strace. 
 </body>
 </html>
