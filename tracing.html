@@ -46,7 +46,8 @@
   indeed was found within the stack trace, so I decided to log the strace output and begin to grep.
   This indeed confirmed that <i>print_exception()</i> was the relevant function and that it was called
   from within <i>start_event_loop()</i>. <i>start_event_loop()</i> was defined within the file
-  <strong><i>gdb/event-loop.c</i></strong>. 
+  <strong><i>gdb/event-loop.c</i></strong>. apparently gdb had created their own try catch exception
+  handling machinery and this was within the <i>start_event_loop()</i> function. 
   
   
 </body>
