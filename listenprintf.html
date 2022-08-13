@@ -18,7 +18,10 @@
      and I want some indication of when the contents of standard output changes, without resorting to 
      a while loop that continuously polls standard output or its associated buffer. I guess the first
     question is what information about the callee of a read/write to standard output does ... standard
-    output provide? 
+    output provide? I came across this intriguing line from the wikipedia article on file descriptors,
+    <br><p class="source"><i>The program requests data transfer with the write operation.</i></p></br>
+    Did this mean that the write syscall acted as a bonafide representative of writing to standard output?
+    
     
      </p>
   </body>
