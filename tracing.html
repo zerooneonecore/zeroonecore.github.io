@@ -49,7 +49,8 @@
   <strong><i>gdb/event-loop.c</i></strong>. apparently gdb was using a try catch exception
   handler and this was within the <i>start_event_loop()</i> function. This meant that whatever exception catch
   was catching, it originated within the try block, and the function within the try block here is 
-  <i>gdb_do_one_event()</i>
+  <i>gdb_do_one_event()</i>, at this point I have no idea what's going on, the event loop is complex
+  and I know nothing about implementing event loops to make sense of its logic. 
   
   
 </body>
