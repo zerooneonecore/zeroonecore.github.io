@@ -53,7 +53,12 @@
   effort understanding each line as the command im trying to understand now, the run command. 
   So I decided that I would take my chances with this function, and just look through it. 
   I had the source code, so I thought, maybe I can just, splice in a printf statement, it should get printed
-  to standard output and that will either be in gdb or on the terminal. 
+  to standard output and that will either be in gdb or on the terminal. This paid off, evidenced by,
+  <br><p class="source"><strong>(gdb) run
+  <i>Here we are, executing in <reopen_exec_file>Starting program:</i><br>
+No executable file specified.<br>
+  Use the "file" or "exec-file" command.<br></strong></p><br>
+  The "Here we are" line, is the one that I have spliced in. 
 
 
     
