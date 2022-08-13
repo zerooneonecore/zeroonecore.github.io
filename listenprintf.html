@@ -27,7 +27,10 @@
     This should mean that a write syscall should be all that is necessary to monitor when inferring a write
     to standard output since no other writers exist. Our problem then reduces, or perhaps increases, 
     to that of monitoring userspace programs for syscalls. So, how do user space programs call system
-    calls, and furthermore, will this produce any problems for the stack trace mechanism?
+    calls, and furthermore, will this produce any problems for the stack trace mechanism? I had read that
+  glibc had wrappers for syscalls, and this would simplify things since uhh, it would give the name of
+  a function to monitor, rather than having to wait for some specific assembly instructions/opcodes.
+  
   
     
      </p>
