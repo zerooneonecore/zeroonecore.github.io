@@ -44,6 +44,8 @@
   an absurd amount of output, most if it from gdb rather than shared libraries. So I decided to return
   to the original useless executable. I knew the specific error message that was being printed, and this
   indeed was found within the stack trace, so I decided to log the strace output and begin to grep.
+  This indeed confirmed that <i>print_exception()</i> was the relevant function and that it was called
+  from within <i>start_event_loop()</i>.
   
   
 </body>
