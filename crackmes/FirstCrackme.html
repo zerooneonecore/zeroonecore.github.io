@@ -42,7 +42,10 @@
     This confirmed that it was definitely within the heap section, and that this indeed was the address
   returned by <i>malloc()</i>. What followed was a call to <i>getchar()</i> and since this function took
   no arguments, it was not of any interest. What followed from here was a <i>getchar() loop</i>, and while
-  its possible that data could be altered within the loop, I opted to assume that it was normal.
+  its possible that data could be altered within the loop, I opted to assume that it was normal. The prior
+  assumption that it was a normal <i>getchar()</i> loop was looking to be false, and upon further thought
+  I realized that if the algorithm operated on characters, it would make sense that it would occur within
+  the <i>getchar()</i> loop.
   
     </p>
   </body>
