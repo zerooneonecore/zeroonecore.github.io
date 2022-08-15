@@ -18,7 +18,8 @@
     The next thing I'll do is load it into a debugger <i>gdb</i> and check for any calls to <i>strmcp()</i>
     The program was much more complex than i was expecting, with calls to functions like <i>malloc()</i>,
     <i>realloc()</i>, and some user created functions. There were several calls to <i>printf()</i>
-    and <i>puts()</i> so I decided to map these out by setting breakpoints. 
+    and <i>puts()</i> so I decided to map these out by setting breakpoints. After the first call to
+    <i>printf()</i>, nothing was printed, which was unexpected.
     </p>
   </body>
   </html>
