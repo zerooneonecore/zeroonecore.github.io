@@ -62,7 +62,9 @@ $25 = 0x7fffffffe25b "jesus"<br>
   This suggested that the password was <strong>"<i>NomanProdhan</i>"</strong>, and from here I decided
   to run the binary outside the debugger. By supplying <i>NomanProdhan</i> as a name, the idea was that
   a license was registered to <i>NomanProdhan</i>, hence the two calls to <i>strmcp()</i>, from here, I set the register
-  holding the name I supplied, to <i>NomanProdhan</i> to proceed.
+  holding the name I supplied, to <i>NomanProdhan</i> to proceed. This allowed me to get past the initial
+  jump to the error routine, and one call to <i>strcmp()</i> remained. So this had to be the one that
+  checked the license key.
     
 
     
