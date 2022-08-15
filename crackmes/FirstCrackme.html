@@ -28,6 +28,14 @@
     it must be hardcoded. I examined the memory of the address returned by <i>malloc()</i>, and much of it
     was zeros, while <i>malloc()</i> has been known to do this, as a sanity check I examined the heap section
     based on the info provided by <i><strong>info proc mappings</strong></i> within <i>gdb</i>
+    I subtracted the addresses of the heap section provided by the memory map of the program with the following
+    output.<br><br> 
+    <p class="source">p 0x55555555a000-0x555555559000<br>
+                        $35 = 4096
+    </p><br>
+    4096 was a nice number to see, as it seemed to be aligned to a page size. Next I wanted to see if the
+  address returned by <i>malloc()</i> was inclusive to this range, and figured that the difference must be
+  to the expression 4096&lt;d&gt;0. 
     
     </p>
   </body>
