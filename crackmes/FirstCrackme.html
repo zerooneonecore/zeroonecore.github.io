@@ -35,12 +35,13 @@
     </p><br>
     4096 was a nice number to see, as it seemed to be aligned to a page size. Next I wanted to see if the
   address returned by <i>malloc()</i> was inclusive to this range, and figured that the difference must be
-  to the expression 0&lt;d&lt;4096. (Output listed below)<br>
-  <p class="source">p 0x55555555a000-0x5555555596b0<br>
+  to the expression 0&lt;d&lt;4096. (Output listed below)
+  <br><p class="source">p 0x55555555a000-0x5555555596b0<br>
                       $38 = 2384<br>
     </p><br>
     This confirmed that it was definitely within the heap section, and that this indeed was the address
-  returned by <i>malloc()</i>
+  returned by <i>malloc()</i>. What followed was a call to <i>getchar()</i> and since this function took
+  no arguments, it was not of any interest. 
     </p>
   </body>
   </html>
