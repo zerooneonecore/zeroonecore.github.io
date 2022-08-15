@@ -19,7 +19,11 @@
     The program was much more complex than i was expecting, with calls to functions like <i>malloc()</i>,
     <i>realloc()</i>, and some user created functions. There were several calls to <i>printf()</i>
     and <i>puts()</i> so I decided to map these out by setting breakpoints. After the first call to
-    <i>printf()</i>, nothing was printed, which was unexpected.
+    <i>printf()</i>, nothing was printed, which was unexpected. After trying to override a cmp instruction,
+    it resulted in a segmentation fault, so I opted instead to try to recover the arguments passed to the
+    different functions. At this point I was confident that the license check routine was performed within
+    the <i>input()</i> function.<br><br>
+    
     </p>
   </body>
   </html>
