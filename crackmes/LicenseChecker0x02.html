@@ -39,6 +39,12 @@
     the program name, rather than the second argument, I've printed it as a readable string with the
     following command <strong>print *(char **)$rsi</strong>. Why this works is beyond the scope of this
     post, or I am unsure of how to explain it satisfactorily in few words. 
+    Anyway, this gets me the first commandline argument, and fishing around on the stack gets me the 
+    argument I was looking for, the name argument, given by the following command<br>
+    <p source="class"><strong>print *((char **)$rsi + 1)<br>
+      $28 = 0x7fffffffe25b "jesus"</strong></p>
+    Placeholder.
+
     
 
     
