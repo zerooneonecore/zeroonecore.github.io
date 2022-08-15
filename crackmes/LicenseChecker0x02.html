@@ -37,12 +37,8 @@
     of the function, and the amount of output is proportional to the size of the number, in this case 20.
     This turns out to be on the right track, though what I print is the first commandline argument,
     the program name, rather than the second argument, I've printed it as a readable string with the
-    following command <strong>print *(char **)$rsi</strong>.
-    <br>
-    This depends on the assumption that the argument is an element of a string array, where the string array
-    is (char **), and * is the dereference operator, hence as it appears outside the expression, yielding
-    *(char **). Familiarity with c programming makes this assumption easier to justify as this is the 
-    underlying data types used to program commandline arguments. 
+    following command <strong>print *(char **)$rsi</strong>. Why this works is beyond the scope of this
+    post, or I am unsure of how to explain it satisfactorily in few words. 
     
 
     
