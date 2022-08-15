@@ -53,7 +53,7 @@
     if you miss the jump on the first strcmp(), you definitely lose. So from here It was apparent that it 
     was worth the effort to examine the arguments to this particular strcmp(). I printed the contents
   of the <i>rsi</i> and <i>rdi</i> registers which were the argument to the strcmp(), and the output was
-  <br><p class="source"><br>
+  <br><br><p class="source"><br>
 (gdb) p (char *)$rsi<br>
 $24 = 0x555555556038 "NomanProdhan"<br>
 (gdb) p (char *)$rax<br>
