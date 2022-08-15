@@ -64,7 +64,9 @@ $25 = 0x7fffffffe25b "jesus"<br>
   a license was registered to <i>NomanProdhan</i>, hence the two calls to <i>strmcp()</i>, from here, I set the register
   holding the name I supplied, to <i>NomanProdhan</i> to proceed. This allowed me to get past the initial
   jump to the error routine, and one call to <i>strcmp()</i> remained. So this had to be the one that
-  checked the license key.
+  checked the license key. <i>strcmp()</i> was consistently reading its arguments from two registers, <i>rsi</i>,
+  and <i>rdi</i>, reading one of them resulted in finding out the value of the license key. 
+  
     
 
     
