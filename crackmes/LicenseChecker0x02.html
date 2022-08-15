@@ -51,8 +51,16 @@
     With respect to password programs, calls to strcmp() are significant, in this program there were two,
     which I found a bit strange. Anyway, this gave me the information that I wanted to know, which is that
     if you miss the jump on the first strcmp(), you definitely lose. So from here It was apparent that it 
-    was worth the effort to examine the arguments to this particular strcmp().
-
+    was worth the effort to examine the arguments to this particular strcmp(). I printed the contents
+  of the <i>rsi</i> and <i>rdi</i> registers which were the argument to the strcmp(), and the output was
+  <p class="source"><br>
+(gdb) p (char *)$rsi<br>
+$24 = 0x555555556038 "NomanProdhan"<br>
+(gdb) p (char *)$rax<br>
+$25 = 0x7fffffffe25b "jesus"<br>
+  </p><br>
+  This suggested that the password was <strong>"<i>NomanProdhan</i>"</strong>, and from here I decided
+  to run the binary outside the debugger. 
     
 
     
