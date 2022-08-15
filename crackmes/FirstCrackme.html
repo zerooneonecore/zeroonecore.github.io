@@ -25,7 +25,9 @@
     the <i>input()</i> function.<br><br>
     <i>malloc()</i> took a single argument, a <i>size</i> argument, and I wanted to see if this varied
     based on the user input. The <i>malloc()</i> call occurred before the reading of the license key, so
-    it must be hardcoded. 
+    it must be hardcoded. I examined the memory of the address returned by <i>malloc()</i>, and much of it
+    was zeros, while <i>malloc()</i> has been known to do this, as a sanity check I examined the heap section
+    based on the info provided by <i><strong>info proc mappings</strong></i> within <i>gdb</i>
     
     </p>
   </body>
