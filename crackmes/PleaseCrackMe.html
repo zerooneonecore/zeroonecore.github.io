@@ -18,6 +18,8 @@
      number, and a password. There are several calls to print functions and input functions, in this case
     <i>scanf</i>. Now usually the last function called before exiting is a print function, so the first
      thing I'm going to look for is a kind of far jump to the last or a later print function.
+     This turns out to be a fruitful idea, as putting a breakpoint in an area fitting this criteria
+    indeed resulted in a jump to the "wrong password" message.
      </p>
   </body>
   </html>
