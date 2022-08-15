@@ -49,7 +49,9 @@
     execution of the program, which worked wonderfully, as i was able to see the name argument being moved
     from a different register further down in the program right before a call to strcmp().
     With respect to password programs, calls to strcmp() are significant, in this program there were two,
-    which I found a bit strange.
+    which I found a bit strange. Anyway, this gave me the information that I wanted to know, which is that
+    if you miss the jump on the first strcmp(), you definitely lose. So from here It was apparent that it 
+    was worth the effort to examine the arguments to this particular strcmp().
 
     
 
