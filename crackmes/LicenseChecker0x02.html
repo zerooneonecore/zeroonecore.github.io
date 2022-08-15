@@ -22,7 +22,12 @@
     <strong>info <i>functions</i></strong> command to print a list of functions within the binary, 
     This output allows me to see that the binary is a c/c++ file, based on the functions that it has.
     Since c files entry point is the <i>main()</i> function, I'll run <strong>disas <i>main</i></strong> 
-    to output the code associated with the <i>main()</i> function.
+    to output the code associated with the <i>main()</i> function. I should probably mention that gdb needs
+    to be run with commandline arguments since the program takes commandline arguments and then syntax
+    for this is <strong>gdb --args filename arg1 arg2 arg3</strong>. Now, I've made a guess here,
+    which is that since the output of the error message is <strong>sorry, <i>name</i>, you don't have a license</strong>,
+    that the name is read once, and read by both the error code and success code, so i might be able to use
+    this information to search for references to the memory location of the name. 
     
     
     
