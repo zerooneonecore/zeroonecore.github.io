@@ -42,7 +42,7 @@
     Anyway, this gets me the first commandline argument, and fishing around on the stack gets me the 
     argument I was looking for, the name argument, given by the following command<br>
     <p class="source"><strong>print *((char **)$rsi + 1)<br>
-      $28 = 0x7fffffffe25b "jesus"</strong></p>
+      $28 = 0x7fffffffe25b "jesus"</strong></p><br>
     Now the idea here was to a watchpoint on this memory location, referred to as <strong>((char **)$rsi + 1)</strong>
     in hopes that the error code routine, and the success code routine would read it, and then we could continue
     execution and wait until we are in those presumed routines. So I set a read watchpoint and continued
@@ -53,7 +53,7 @@
     if you miss the jump on the first strcmp(), you definitely lose. So from here It was apparent that it 
     was worth the effort to examine the arguments to this particular strcmp(). I printed the contents
   of the <i>rsi</i> and <i>rdi</i> registers which were the argument to the strcmp(), and the output was
-  <p class="source"><br>
+  <br><p class="source"><br>
 (gdb) p (char *)$rsi<br>
 $24 = 0x555555556038 "NomanProdhan"<br>
 (gdb) p (char *)$rax<br>
