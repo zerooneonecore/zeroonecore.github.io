@@ -18,6 +18,12 @@
      in this case the program takes two commandline arguments, a name, and the key. We also want to get an 
     idea about the control flow, and the idea here is that if we have provided the name, and the key, 
     and the key is valid, output a success message, and if not, output an error message.
+    Now we can load this into a debugger, I will be using <i>gdb</i>, I'll use the 
+    <strong>info <i>functions</i></strong> command to print a list of functions within the binary, 
+    This output allows me to see that the binary is a c/c++ file, based on the functions that it has.
+    Since c files entry point is the <i>main()</i> function, I'll run <strong>disas <i>main</i></strong> 
+    to output the code associated with the <i>main()</i> function.
+    
     
     
      
