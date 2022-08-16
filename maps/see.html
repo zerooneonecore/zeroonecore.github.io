@@ -56,6 +56,21 @@
    	  sub    eax,edx<br>
     </td>
   </tr>
+  <tr>
+    <td>
+    while ((c = getchar()) != EOF):<br>
+	           int i = i + 1;<br>
+    </td>
+      jmp    0x55555555515b &gt;main+18&lt;<br>
+ &gt;main+14&lt;  add    DWORD PTR [rbp-0x8],0x1<br> 
+  &gt;main+18&lt; call   0x555555555050 <getchar@plt><br>
+      mov    DWORD PTR [rbp-0x4],eax<br>
+      cmp    DWORD PTR [rbp-0x4],0xffffffff<br>
+  	  jne    0x555555555157 &gt;main+14&lt;<br>
+    <td>
+    
+    </td>
+  </tr>
  </table><br>
   </body>
   </html>
