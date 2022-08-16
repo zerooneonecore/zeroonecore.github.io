@@ -31,11 +31,11 @@
   <tr>
     <td>
          short int i = 0x5;<br>
-         long int a = 0x20;<br>
+         long int a = 0x20;<br><br>
          return i + a;<br>
     </td>
     <td>mov    WORD PTR [rbp-0xa],0x5<br>
-        mov    QWORD PTR [rbp-0x8],0x20<br>
+        mov    QWORD PTR [rbp-0x8],0x20<br><br>
         movsx  eax,WORD PTR [rbp-0xa]<br>
         mov    rdx,QWORD PTR [rbp-0x8]<br>
         add    eax,edx<br>
