@@ -45,12 +45,12 @@
   <tr>
     <td>
         short int a = 32;<br>
-        long int b = 64;<br>
+        long int b = 64;<br><br>
         return a - b;<br>
     </td>
     <td>
       mov    WORD PTR [rbp-0xa],0x20<br>
-      mov    QWORD PTR [rbp-0x8],0x40<br>
+      mov    QWORD PTR [rbp-0x8],0x40<br><br>
       movsx  eax,WORD PTR [rbp-0xa]<br>
       mov    rdx,QWORD PTR [rbp-0x8]<br>
    	  sub    eax,edx<br>
