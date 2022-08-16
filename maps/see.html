@@ -28,6 +28,19 @@
     <td>mov    QWORD PTR [rbp-0xa],0x20</td>
     <td>long int a = 0x20;</td>
   </tr>
+  <tr>
+    <td>
+         short int i = 0x5;<br>
+         long int a = 0x20;<br>
+         return i + a;<br>
+    </td>
+    <td>mov    WORD PTR [rbp-0xa],0x5<br>
+        mov    QWORD PTR [rbp-0x8],0x20<br>
+        movsx  eax,WORD PTR [rbp-0xa]<br>
+        mov    rdx,QWORD PTR [rbp-0x8]<br>
+        add    eax,edx<br>
+</td>
+  </tr>
  </table><br>
   </body>
   </html>
