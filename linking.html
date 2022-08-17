@@ -23,6 +23,16 @@
     need to be adjusted. <br>This was better than recompiling the entire program, but it certainly didn't 
     appear elegant. This suggested that the right tool for the job was breakpoints, and debuggers, and that
     perhaps its wiser to work within memory. So there must be an elegant way to intercept functions using
-    debuggers, with breakpoints being the obvious primitive.</p>
+    debuggers, with breakpoints being the obvious primitive.
+    <p class="source">
+      (gdb) p/t *(long int *)0x7fffffffde18<br>
+           $66 = 10101010101010100000000000000000000000000010100<br>
+      (gdb) p/t *(long int*)$rbp-0x18<br>
+           $67 = 11111111111111111111111111111111101111000111000<br>
+      (gdb) p $rbp-0x18 == 0x7fffffffde18<br>
+    </p>
+  I am mystified as to why these two commands give different results, casting should not changed the binary
+  representation, only the amount of bits shown? 
+  </p>
   </body>
   </html>
