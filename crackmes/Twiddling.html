@@ -30,7 +30,18 @@
   (gdb) x $rdi+2<br>
   0x7fffffffde12:	97 'a'<br>
   </p><br><br>
-  This is the data that would be read by the <i>stod()</i> function call to follow.
+  This is the data that would be read by the <i>stod()</i> function call to follow. the stod function would
+  then read the user input itself, shown following
+  <br><br><p class="source">
+  (gdb) x $rdi+1<br>
+0x7fffffffde11:	65 'A'<br>
+(gdb) x $rdi+2<br>
+0x7fffffffde12:	65 'A'<br>
+(gdb) x $rdi+3<br>
+0x7fffffffde13:	65 'A'<br>
+(gdb) x $rdi+4
+0x7fffffffde14:	10 '\n'<br>
+  </p><br><br>
   </p>
     
     
