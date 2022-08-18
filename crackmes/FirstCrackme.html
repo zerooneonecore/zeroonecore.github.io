@@ -77,7 +77,7 @@
   this to a value on the stack, all I had to do now was figure out how this value was being generated.
   This helped, for a little bit, but then I was stuck again, I moved to rigorously testing my assumptions
   about the program using conditional breakpoints and watchpoints.
-  Update, I believe that the algorithm is <i>((strlen(user input) * 0xfffffff6) + 0x34e7) == ascii() * strlen(user input)</i>
+  Update, I believe that the algorithm is <i>((strlen(user input) * 0xfffffff6) + 0x34e7) == map(ascii())</i>
   I've gotten to the point where i can consistently override the program, as well, which is binary patching, is
   progress. 
   <br><p class="source">
@@ -97,6 +97,7 @@
 $153 = 33
   </p><br>
   For me this was convincing, since you could clearly see that 66 was a multiple of 33, or '!'
+  But even further I had learned that the value is the sum of all the ascii values of the supplied string.
   
   
   </body>
