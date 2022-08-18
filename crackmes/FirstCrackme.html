@@ -80,8 +80,12 @@
   Update, I believe that the algorithm is <i>((strlen(user input) * 0xfffffff6) + 0x34e7) == user input
   I've gotten to the point where i can consistently override the program, as well, which is binary patching, is
   progress. 
-
-
-    </p>
+  <br><p class="source">
+  (gdb) p/d ($eax-0x34e7)/0xfffffff6<br>
+             $119 = 1<br>
+  (gdb) x $rbp-0x10<br>
+   0x7fffffffde30:	107<br>
+ </p><br>
+  
   </body>
   </html>
