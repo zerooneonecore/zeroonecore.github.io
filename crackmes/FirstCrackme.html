@@ -100,7 +100,11 @@ $153 = 33
   But even further I had learned that the value is the sum of all the ascii values of the supplied string.
   One thing that is rather peculiar about the 0xfffffff6 value, is that interpreted as a <i>long int</i>,
   it is almost exactly twice the maximum integer a 32 bit value, can hold, or 2,147,483,647, the value being
-  4,294,967,286.
+  4,294,967,286. Now I have updated the algorithm, not knowing if it is exactly accurate, but it is within bounds
+  I believe,
+  <br><p class="source">
+     <i>[13453 - 10 * strlen(input)] == map(ascii())
+       </p><br>
   
   
   </body>
