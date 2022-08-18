@@ -44,7 +44,8 @@
   </p><br><br>
   So far as I can tell, all <i>stod()</i> does is read the string. After the call to <i>strlen()</i>, the program
   compares the string length with 0x20=32, presumably for the benefit of the bit twiddling routines to come?
-  So the string definitely needs to be 31 characters long excluding newline.  
+  So the string definitely needs to be 31 characters long excluding newline. <i>this_is_where_the_fun_begins()</i>
+  then starts off with a far jump. 
   
   </p>
   
