@@ -77,6 +77,11 @@
   this to a value on the stack, all I had to do now was figure out how this value was being generated.
   This helped, for a little bit, but then I was stuck again, I moved to rigorously testing my assumptions
   about the program using conditional breakpoints and watchpoints.
+  Update, I believe that the algorithm is <i>((strlen(user input) * 0xfffffff6) + 0x34e7) == user input
+  I've gotten to the point where i can consistently override the program, as well, which is binary patching, is
+  progress. 
+
+
     </p>
   </body>
   </html>
