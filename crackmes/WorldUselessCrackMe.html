@@ -19,6 +19,9 @@
      the problem of optimization and so have decided that nurturing an understanding of assembly is worth
     the time. The names were mangled, and the gdb setting <i>set print asm-demangle on</i>
     actually worked. However the program seemed to be C++ which I was unfamiliar with. 
+    I first wanted to find where the 'Try' string was originating from, and my first instinct was to 
+    breakpoint right before the printing, but then I realized that due to C++'s object oriented nature, it might 
+    be written to the object earlier than i expect, with its constructors and what not.
     
   </body>
   </html>
