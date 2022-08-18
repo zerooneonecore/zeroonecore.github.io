@@ -42,7 +42,9 @@
 (gdb) x $rdi+4
 0x7fffffffde14:	10 '\n'<br>
   </p><br><br>
-  So far as I can tell, all <i>stod()</i> does is read the string. 
+  So far as I can tell, all <i>stod()</i> does is read the string. After the call to <i>strlen()</i>, the program
+  compares the string length with 0x20=32, presumably for the benefit of the bit twiddling routines to come?
+  
   </p>
   
     
