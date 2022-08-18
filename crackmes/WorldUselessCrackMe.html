@@ -21,7 +21,10 @@
     actually worked. However the program seemed to be C++ which I was unfamiliar with. 
     I first wanted to find where the 'Try' string was originating from, and my first instinct was to 
     breakpoint right before the printing, but then I realized that due to C++'s object oriented nature, it might 
-    be written to the object earlier than i expect, with its constructors and what not.
+    be written to the object earlier than i expect, with its constructors and what not. It became apparent
+    that the conditional jumps in this program, absent the stack canary, were nonexistent, and perhaps the author
+    means what they say when they say the crackme is useless. 
+    
     
   </body>
   </html>
