@@ -8,7 +8,7 @@
   h1 { text-align: center; }
   #code_1 { border: 2px solid white; width: 50%; margin: auto; padding: 2px;text-align: center;}
   #code_2 { border: 2px solid red; }
-  .source { border: 2px solid white; width: 50%; margin: auto; padding: 4px; text-align: center; overflow: scroll;}
+  .source { border: 2px solid white; width: 60%; margin: auto; padding: 4px; text-align: center; overflow: scroll;}
  
 
 
@@ -46,8 +46,25 @@
   compares the string length with 0x20=32, presumably for the benefit of the bit twiddling routines to come?
   So the string definitely needs to be 31 characters long excluding newline. <i>this_is_where_the_fun_begins()</i>
   then starts off with a far jump. From here <i>ive_never_been_stung_by_a_wasp()</i> is called with the first
-  character of the user supplied string.
-   
+  character of the user supplied string. <i>ive_never_been_stung_by_a_wasp()</i> is called several times
+  throughout the program, so I thought it might be helpful to observe its various return values to see if any
+  pattern arises. 
+  <br><br> 
+  <table class="source">
+  <tr>
+    <th>function</th>
+    <th>call #</th>
+    <th>return value</th>
+    <th>input string</th>
+  </tr>
+  <tr>
+    <td>ive_never_been_stung_by_a_wasp()</td>
+    <td>1</td>
+    <td>0000000000000000000000000100001000000000000000000000000001000010</td>
+    <td>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</td>
+  </tr>
+ </table><br>
+  Placeholder
   </p>
   
     
