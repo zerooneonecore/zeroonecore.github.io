@@ -83,7 +83,12 @@
   by the second <i>printf()</i>, I may experiment putting this information in a graph because its becoming
   quite complex.
   <img src="graph1.svg" width="500" height="500"></img>
-  
+  <br>
+  After founding the register where the comparison to the victory code path is done, I noticed that its 
+  bit string value does not vary at all when the flag input is random strings. In addition this value
+  is set within the <i>this_is_where_the_fun_begins()</i> function and only incremented a few times after that.
+  This indicated that the algorithm to generate this bit string is exact, and done fully within the 
+  <i>this_is_where_the_fun_begins()</i> function.
   </p>
   
     
